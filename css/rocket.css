@@ -1,3 +1,7 @@
+body{
+	font-family: 'Nova Cut', cursive; 
+}
+
 .left{
 	background-color: #FA8072;
 	position: fixed;
@@ -7,8 +11,28 @@
 	left: 0;
 }
 
+.interface {
+	text-align: center;
+	padding: 20px;
+}
+
+a.button{
+	display: inline-block;
+	background-color: black;
+	color: white;
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase;
+	transition: color 300ms;
+}
+
+a:hover{
+	color: blue;
+}
+
 .right{
-	background-color: crimson;
+	background-color: white;
 	position: fixed;
 	width: 50%;
 	height: 100%;
@@ -17,24 +41,69 @@
 }
 
 .ground{
-	background-color: green;
+	background: url('../img/ground.png') no-repeat center 0;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 20px;
+	height: 30px;
+}
+
+.nervous{
+	position: absolute;
+    bottom: 150px;
+    left: 50%;
+    background: url(../img/i.png) no-repeat 0 0;
+    width: 223px;
+    height: 100px;
+    margin-left: -260px;
+    display: none;
+}
+
+.nervous.show{
+	display: block;
+}
+
+.cant-wait{
+	position: absolute;
+    bottom: 150px;
+    left: 50%;
+    background: url(../img/c.png) no-repeat 0 0;
+    width: 223px;
+    height: 100px;
+    display: none;
+}
+
+.cant-wait.show{
+	display: block;
 }
 
 .rocket{
 	position: absolute;
-	left: 50%;
-	bottom: 20px;
-	width: 20px;
-	height: 100px;
-	background-color: black;
-	transition: bottom 10000ms;
+    left: 50%;
+    bottom: -14px;
+    width: 110px;
+    height: 228px;
+    margin-left: -71.5px;
+    background: url(../img/r.png) no-repeat 0 0;
+    transition: bottom 10000ms;
 }
 
+/* rocket bg image */
+body.body-state2 .rocket{
+	background: url('../img/o.png') no-repeat 0 0;
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background: url('../img/o.png') no-repeat 0 0;
+}
+body.body-state5 .rocket{
+	background: url('../img/boom.png') no-repeat 0 0;
+	width: 209px;
+	height: 200px;
+	margin-left: -104.5px;
+}
 body.body-state1 .rocket{
 	transition: none;
 }
